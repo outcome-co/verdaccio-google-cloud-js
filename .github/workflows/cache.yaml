@@ -1,0 +1,40 @@
+name: Cache
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  npm_config_cache: .cache/npm
+  node_version: 13.x
+
+jobs:
+  update_cache:
+    name: Update Cache
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.OTTO_TOKEN }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2.1.1
+        with:
+          node-version: ${{ env.node_version }}
+
+      - name: Configure npm cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.npm_config_cache }}
+          key: npm-${{ hashFiles('./package*.json') }}
+          restore-keys: |
+            npm
+
+      - name: Install dependencies
+        run: npm install

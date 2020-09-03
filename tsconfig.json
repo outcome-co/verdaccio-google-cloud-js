@@ -8,6 +8,7 @@
     "checkJs": true,
     "allowJs": true,
     "noEmit": true,
+    "skipLibCheck": true,
 
     // General settings for code interpretation
     "newLine": "LF",

@@ -1,1 +1,1 @@
-module.exports = require('@outcome-co/devkit/config/jest')
+module.exports = require('@outcome-co/devkit/dist/config/jest')

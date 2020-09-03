@@ -24,7 +24,7 @@ repos:
       language: system
       stages: [commit, push]
       verbose: true
-      entry: sh -c "NODE_ENV=ci npm run lint"
+      entry: npm run lint
       types: [file, javascript]
       pass_filenames: false
 
@@ -33,5 +33,5 @@ repos:
       language: system
       stages: [push]
       verbose: true
-      entry: sh -c "NODE_ENV=ci npm run test"
+      entry: npm run test
       pass_filenames: false

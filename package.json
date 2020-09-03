@@ -1,27 +1,46 @@
 {
-    "name": "@outcome-co/verdaccio-google-cloud",
-    "version": "1.0.0",
-    "description": "Enhancements for the Google Cloud Verdaccio storage plugin",
-    "main": "index.js",
-    "scripts": {
-        "lint": "eslint --ignore-path .gitignore --max-warnings 0 .",
-        "test": "jest",
-        "pretest": "npm run type-check",
-        "type-check": "tsc",
-        "docs": "gulp docs"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/outcome-co/verdaccio-google-cloud-js.git"
-    },
-    "author": "Outcome <engineering@outcome.co>",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/outcome-co/verdaccio-google-cloud-js/issues"
-    },
-    "homepage": "https://github.com/outcome-co/verdaccio-google-cloud-js#readme",
-    "dependencies": {},
-    "devDependencies": {
-        "@outcome-co/devkit": "^4.1.0"
-    }
+  "name": "@outcome-co/verdaccio-google-cloud",
+  "version": "1.0.0",
+  "description": "Enhancements to the Verdaccio Google Cloud storage plugin",
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore --max-warnings 0 .",
+    "test": "jest ./src",
+    "pretest": "npm run type-check",
+    "type-check": "tsc",
+    "clean": "rm -rf dist coverage",
+    "build": "npm run clean && babel src -d dist",
+    "prepublishOnly": "npm run build",
+    "watch": "watch 'npm run build' src --wait=0.5",
+    "server": "npm run build && nodemon --delay 1 --watch dist --signal SIGTERM ./run/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/outcome-co/verdaccio-google-cloud-js"
+  },
+  "author": "Engineering <engineering@outcome.co>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/outcome-co/verdaccio-google-cloud-js/issues"
+  },
+  "homepage": "https://github.com/outcome-co/verdaccio-google-cloud-js#readme",
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "verdaccio-google-cloud": "^9.7.2"
+  },
+  "devDependencies": {
+    "@outcome-co/devkit": "^7.1.0",
+    "@verdaccio/types": "^9.7.2",
+    "nodemon": "^2.0.4",
+    "verdaccio": "^4.8.1"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "optionalDependencies": {
+    "@outcome-co/verdaccio-github-auth": "^1.1.2"
+  }
 }
