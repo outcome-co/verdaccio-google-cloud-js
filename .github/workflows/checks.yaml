@@ -30,7 +30,7 @@ jobs:
         with:
           failOnWarnings: true
 
-      - uses: amannn/action-semantic-pull-request@v2.0.0
+      - uses: amannn/action-semantic-pull-request@v2.1.0
 
   # Always lint
   checks_and_tests:
