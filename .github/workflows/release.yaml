@@ -6,8 +6,11 @@ on:
       - 'v*'
 
 env:
-  npm_config_cache: .cache/npm
-  node_version: 13.x
+  YARN_CACHE_FOLDER: .cache/yarn
+  node_version: 14.x
+  # yarn needs *some* value in NODE_AUTH_TOKEN to work - it doesn't have
+  # to be valid so long as you're not communicating with the registry
+  NODE_AUTH_TOKEN: XXX
 
 jobs:
   publish_npm:
@@ -27,18 +30,18 @@ jobs:
           node-version: "${{ env.node_version }}"
           registry-url: https://registry.npmjs.org/
 
-      - name: Configure npm cache
+      - name: Configure yarn cache
         uses: actions/cache@v2
         with:
-          path: ${{ env.npm_config_cache }}
-          key: npm-${{ hashFiles('./package-lock.json') }}
+          path: ${{ env.YARN_CACHE_FOLDER }}
+          key: yarn-${{ hashFiles('./yarn.lock') }}
           restore-keys: |
-            npm
+            yarn
 
       - name: Install dependencies
-        run: npm install
+        run: yarn install
 
       - name: Publish npm package
-        run: npm publish --access public
+        run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}

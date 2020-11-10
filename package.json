@@ -7,34 +7,65 @@
     "dist"
   ],
   "scripts": {
-    "lint": "eslint --ignore-path .gitignore --max-warnings 0 .",
-    "test": "jest ./src",
-    "pretest": "npm run type-check",
-    "type-check": "tsc",
+    "build": "babel src -d dist --copy-files",
     "clean": "rm -rf dist coverage",
-    "build": "npm run clean && babel src -d dist",
-    "prepublishOnly": "npm run build",
-    "watch": "watch 'npm run build' src --wait=0.5",
-    "server": "npm run build && nodemon --delay 1 --watch dist --signal SIGTERM ./run/server.js"
+    "lint": "eslint --ignore-path .gitignore --max-warnings 0 .",
+    "postbuild": "gulp postbuild",
+    "prebuild": "gulp clean",
+    "prepublishOnly": "yarn run build",
+    "pretest": "yarn typecheck",
+    "server": "npm run build && nodemon --delay 1 --watch dist --signal SIGTERM ./run/server.js",
+    "test": "jest --passWithNoTests ./src",
+    "type-check": "tsc",
+    "typecheck": "tsc",
+    "watch": "watch 'yarn build' src --wait=0.5",
+    "watch:push": "watch 'yalc push --changed' src --wait=0.5"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/outcome-co/verdaccio-google-cloud-js"
   },
-  "author": "Engineering <engineering@outcome.co>",
+  "author": {
+    "name": "Outcome Engineering",
+    "email": "engineering@outcome.co",
+    "url": "https://outcome.co"
+  },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/outcome-co/verdaccio-google-cloud-js/issues"
+    "email": "engineering@outcome.co"
   },
-  "homepage": "https://github.com/outcome-co/verdaccio-google-cloud-js#readme",
+  "homepage": "https://github.com/outcome-co/verdaccio-google-cloud-js",
   "dependencies": {
     "lodash": "^4.17.20",
     "verdaccio-google-cloud": "^9.7.2"
   },
   "devDependencies": {
-    "@outcome-co/devkit": "^7.1.0",
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/register": "^7.12.1",
+    "@outcome-co/devkit": "^8.1.0",
+    "@outcome-co/metapak-core": "^1.0.2",
+    "@types/jest": "^26.0.15",
+    "@types/lodash": "^4.14.165",
+    "@types/node": "^14.14.6",
     "@verdaccio/types": "^9.7.2",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.3",
+    "del": "^6.0.0",
+    "eslint": "^7.13.0",
+    "eslint-config-standard": "^16.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.0",
+    "eslint-plugin-jsdoc": "^30.7.7",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.2",
+    "gulp": "^4.0.2",
+    "jest": "^26.6.3",
+    "metapak": "^3.1.10",
     "nodemon": "^2.0.4",
+    "typescript": "^4.0.5",
     "verdaccio": "^4.8.1"
   },
   "engines": {
@@ -42,5 +73,17 @@
   },
   "optionalDependencies": {
     "@outcome-co/verdaccio-github-auth": "^1.1.2"
+  },
+  "metapak": {
+    "configs": [
+      "node-base",
+      "node-transpiled"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "resolutions": {
+    "chokidar": "^3.4.0"
   }
 }
