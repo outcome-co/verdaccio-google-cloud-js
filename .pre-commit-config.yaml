@@ -33,7 +33,7 @@ repos:
       language: system
       stages: [push]
       verbose: true
-      entry: yarn test
+      entry: yarn test:unit
       pass_filenames: false
 
     - id: metapak
