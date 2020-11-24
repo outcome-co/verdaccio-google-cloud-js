@@ -1,6 +1,6 @@
 {
   "name": "@outcome-co/verdaccio-google-cloud",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Enhancements to the Verdaccio Google Cloud storage plugin",
   "main": "./dist/index.js",
   "files": [

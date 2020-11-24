@@ -1,5 +1,5 @@
 # verdaccio-google-cloud-js
-![Release](https://github.com/outcome-co/verdaccio-google-cloud-js/workflows/Release/badge.svg?branch=v1.1.0) ![version-badge](https://img.shields.io/badge/version-1.1.0-brightgreen)
+![Release](https://github.com/outcome-co/verdaccio-google-cloud-js/workflows/Release/badge.svg?branch=v1.1.1) ![version-badge](https://img.shields.io/badge/version-1.1.1-brightgreen)
 
 Adds some enhancements for the official [verdaccio-google-cloud](https://github.com/verdaccio/monorepo/tree/master/plugins/google-cloud) plugin:
 
