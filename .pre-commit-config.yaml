@@ -35,11 +35,3 @@ repos:
       verbose: true
       entry: yarn test:unit
       pass_filenames: false
-
-    - id: metapak
-      name: metapak
-      language: system
-      stages: [push]
-      verbose: true
-      entry: yarn metapak -s
-      pass_filenames: false
