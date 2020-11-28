@@ -9,7 +9,7 @@
   "scripts": {
     "build": "babel src -d dist --copy-files",
     "clean": "rm -rf dist coverage",
-    "lint": "eslint --ignore-path .gitignore --max-warnings 0 .",
+    "lint": "eslint --ignore-path .gitignore --max-warnings 0 ./src",
     "postbuild": "gulp postbuild",
     "prebuild": "gulp clean",
     "prepublishOnly": "yarn build",
