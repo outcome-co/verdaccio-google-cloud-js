@@ -1306,9 +1306,9 @@
     "@types/node" ">= 8"
 
 "@outcome-co/devkit@^8.1.0":
-  version "8.3.0"
-  resolved "https://registry.yarnpkg.com/@outcome-co/devkit/-/devkit-8.3.0.tgz#39505a05c32a01ff0d2da54fd2064c9e1e9ddca5"
-  integrity sha512-2u7ZGMfnnIQrR83VHjN4GdqBqn7BHTBNAOEpIZuujSRpJnDnrx58Qern0OI+JydkPDF96uFmhAtcqhN+tuyRrQ==
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/@outcome-co/devkit/-/devkit-8.4.0.tgz#44c53a5351634f354ef9811f65fc404c50f2d6c3"
+  integrity sha512-ysc+vcSeiPp5dD0tF1k9V3+sUp+XC3xk9wwvdas6DoZcyNLHvYbp5Lk6UNhyTPlsC/NWcn9zpjCiViMAjghtiw==
   dependencies:
     auto-curry "^0.2.1"
     expect "^26.6.2"
