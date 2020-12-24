@@ -1329,9 +1329,9 @@
     "@types/node" ">= 8"
 
 "@outcome-co/devkit@^9.0.2":
-  version "9.0.2"
-  resolved "https://registry.yarnpkg.com/@outcome-co/devkit/-/devkit-9.0.2.tgz#7c97f34a384dda9f3736faff62a3087bf97867b4"
-  integrity sha512-aO/3ZWyS06Sv9H+RnDGYN/TK2SttOOF6tjPIks3y+gfn8unDCLyqOhV+gK9hHr0VS+IvW7H7k4Fxk/58sbAACA==
+  version "9.0.3"
+  resolved "https://registry.yarnpkg.com/@outcome-co/devkit/-/devkit-9.0.3.tgz#0f5885f96ead94eab7440e3b8336eb3cd2e885cf"
+  integrity sha512-ZYd9zE8V1aqjjk+nZzd8aKItexBsI4W73yrlR6rpDe0+clTtYbnLQZtDTjICaEMSOyclYPHomxpdY/L00+wLpg==
   dependencies:
     auto-curry "^0.2.1"
     del "^6.0.0"
