@@ -1,22 +1,26 @@
 {
     "compilerOptions": {
-      // General settings for code interpretation
-      "target": "es2017",
-      "module": "commonjs",
-      "resolveJsonModule": true,
-      "esModuleInterop": true,
-      "checkJs": true,
-      "allowJs": true,
-      "noEmit": true,
-      "skipLibCheck": true,
-  
-      // General settings for code interpretation
-      "newLine": "LF",
-  
-      // Console output settings
-      "pretty": true
+        "target": "ES5",
+        "module": "commonjs",
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "allowJs": true,
+        "checkJs": true,
+        "declaration": true,
+        "outDir": "./dist",
+        "alwaysStrict": true,
+        "strict": true,
+        "rootDir": "./src",
+        "removeComments": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "allowUnreachableCode": false,
+        "skipLibCheck": true
     },
-  
-    "exclude": ["node_modules", "coverage", "**/*.test.js", "dist"]
-  }
-  
+    "include": [
+        "src/**/*",
+        "types/**/*.d.ts"
+    ]
+}

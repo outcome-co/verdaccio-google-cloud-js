@@ -3,24 +3,25 @@
   "version": "1.1.5",
   "description": "Enhancements to the Verdaccio Google Cloud storage plugin",
   "main": "./dist/index.js",
+  "types": "./types/types.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "scripts": {
-    "build": "babel src -d dist --copy-files",
-    "clean": "rm -rf dist coverage",
-    "lint": "eslint --ignore-path .gitignore --max-warnings 0 ./src",
-    "postbuild": "gulp postbuild",
-    "prebuild": "gulp clean",
+    "build": "gulp build",
+    "clean": "gulp clean",
+    "lint": "yarn lint:prettier:check && yarn lint:eslint",
+    "lint:prettier:check": "prettier --check ./src ./types/*d.ts",
+    "lint:prettier": "prettier --write ./src ./types/*d.ts",
+    "lint:eslint": "eslint --ignore-path .gitignore --max-warnings 0 ./src ./types",
     "prepublishOnly": "yarn build",
-    "pretest": "yarn typecheck",
-    "server": "npm run build && nodemon --delay 1 --watch dist --signal SIGTERM ./run/server.js",
-    "test": "yarn test:unit",
-    "test:unit": "jest --passWithNoTests ./src",
-    "type-check": "tsc",
-    "typecheck": "tsc",
+    "test": "yarn test:unit && yarn test:integration",
+    "test:integration": "TEST_ENV=integration jest --color --passWithNoTests ./src",
+    "test:unit": "TEST_ENV=test jest --color --passWithNoTests ./src",
     "watch": "watch 'yarn build' src --wait=0.5",
-    "watch:push": "watch 'yalc push --changed' src --wait=0.5"
+    "watch:push": "watch 'yalc push --changed' src --wait=0.5",
+    "server": "npm run build && nodemon --delay 1 --watch dist --signal SIGTERM ./run/server.js"
   },
   "repository": {
     "type": "git",
@@ -45,14 +46,17 @@
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
     "@babel/register": "^7.12.1",
-    "@outcome-co/devkit": "^9.0.2",
+    "@google-cloud/datastore": "^6.3.1",
+    "@outcome-co/devkit": "^9.3.5",
     "@types/gulp": "^4.0.7",
-    "@types/gulp-sourcemaps": "^0.0.33",
+    "@types/gulp-sourcemaps": "^0.0.34",
+    "@types/http-errors": "^1.8.0",
     "@types/jest": "^26.0.15",
     "@types/lodash": "^4.14.165",
     "@types/node": "^14.14.6",
-    "@typescript-eslint/eslint-plugin": "^4.10.0",
-    "@typescript-eslint/parser": "^4.10.0",
+    "@types/undertaker": "^1.2.6",
+    "@typescript-eslint/eslint-plugin": "^4.13.0",
+    "@typescript-eslint/parser": "^4.13.0",
     "@verdaccio/types": "^9.7.2",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
@@ -61,6 +65,7 @@
     "eslint": "^7.13.0",
     "eslint-config-prettier": "^7.0.0",
     "eslint-config-standard": "^16.0.1",
+    "eslint-config-standard-with-typescript": "^19.0.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.1.0",
     "eslint-plugin-jsdoc": "^30.7.7",
@@ -90,6 +95,7 @@
   "resolutions": {
     "chokidar": "^3.4.0",
     "node-forge": "^0.10.0",
-    "dompurify": "^2.0.17"
+    "dompurify": "^2.0.17",
+    "date-and-time": "^0.14.2"
   }
 }
