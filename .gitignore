@@ -328,3 +328,5 @@ yalc.lock
 
 # Build artifacts
 dist
+
+/run/config/config.yaml

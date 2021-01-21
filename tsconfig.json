@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "target": "ES5",
+        "target": "ES6",
         "module": "commonjs",
         "resolveJsonModule": true,
         "esModuleInterop": true,
@@ -11,13 +11,14 @@
         "alwaysStrict": true,
         "strict": true,
         "rootDir": "./src",
-        "removeComments": true,
+        "removeComments": false,
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "allowUnreachableCode": false,
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "downlevelIteration": true
     },
     "include": [
         "src/**/*",

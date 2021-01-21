@@ -5,7 +5,7 @@ import { getServiceUnavailable, getInternalError, getNotFound } from '@verdaccio
 import { Token, TokenFilter } from '@verdaccio/types'
 import { IStorageHelper } from 'verdaccio-google-cloud/lib/storage-helper'
 
-class GoogleCloudDatabase extends DataStorage {
+class ExtendedGoogleCloudDatabase extends DataStorage {
     /**
      * Save a token.
      *
@@ -108,5 +108,5 @@ class GoogleCloudDatabase extends DataStorage {
     }
 }
 
-export { GoogleCloudDatabase as DataStorage }
-export default GoogleCloudDatabase
+export { ExtendedGoogleCloudDatabase as DataStorage }
+export default ExtendedGoogleCloudDatabase

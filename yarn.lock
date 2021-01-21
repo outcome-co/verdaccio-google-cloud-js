@@ -1357,10 +1357,10 @@
   dependencies:
     "@types/node" ">= 8"
 
-"@outcome-co/devkit@^9.3.5":
-  version "9.3.5"
-  resolved "https://registry.yarnpkg.com/@outcome-co/devkit/-/devkit-9.3.5.tgz#db45bfa02cb220fbb969f506e43709bfc23ff59d"
-  integrity sha512-PrFh4bLxgibPfS9Jzu+nx1Wkp2e7ODMp7nfaYuJlf+CoiaWUrTcVmMeCc0q0dS2r0QuZG8xr61OIjTKYMQx/Ag==
+"@outcome-co/devkit@^9.4.1":
+  version "9.4.1"
+  resolved "https://registry.yarnpkg.com/@outcome-co/devkit/-/devkit-9.4.1.tgz#ffbf7d466680a7fb1247b4dd4b6ab2f828023fdb"
+  integrity sha512-Kq7ku7IvhMO4ePFsVgQncpfcTWo9apGuIwOMzHd3tLXXoEaWJFAcA0fj2MnJaCB1mB1HVDnayEuRDQC34hPJig==
   dependencies:
     auto-curry "^0.2.1"
     del "^6.0.0"
@@ -1372,29 +1372,19 @@
     jest-matcher-utils "^26.6.2"
     skip-if "^1.1.1"
 
-"@outcome-co/verdaccio-github-auth@^1.1.2":
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/@outcome-co/verdaccio-github-auth/-/verdaccio-github-auth-1.3.5.tgz#da9de7167efc94ad6bb078a895c555d59ab6bb69"
-  integrity sha512-ZTI+VItD2+DD10KKIy212dVGSLwuKODb7NufMYy5vgmlRhk/eD9ekFc5VoZesbDK6iPPlbsHHz/FfQIOyvyUfg==
+"@outcome-co/verdaccio-github-auth@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@outcome-co/verdaccio-github-auth/-/verdaccio-github-auth-2.0.3.tgz#fd60700057b760d78b2d46aa5a38b7145966701c"
+  integrity sha512-vbZ2RtPEdFHuKZcj9h6mnNUADf+b4ORAfqUnktVuzt9mjeJQksHPEhMqnPTEIzl7+RWXhPgnNWUiT+EEjRZOsw==
   dependencies:
     "@octokit/graphql" "^4.5.4"
     "@verdaccio/commons-api" "^9.7.1"
-    json-to-graphql-query "^2.0.0"
+    graphql "^15.4.0"
+    graphql-tag "^2.11.0"
     limiter "^1.1.5"
     lodash "^4.17.20"
     node-cache "^5.1.2"
-  optionalDependencies:
-    "@outcome-co/verdaccio-google-cloud" "^1.1.0"
-
-"@outcome-co/verdaccio-google-cloud@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@outcome-co/verdaccio-google-cloud/-/verdaccio-google-cloud-1.1.0.tgz#65c3535b6c9a19bcb94740c00b8d398e9ad08865"
-  integrity sha512-6kUxMT4ReY8G8JKP8myJIDDTxDRdKqeOq9yZJIpa7oWueZCq9QKZcj9Z6xwmVHzX5XbtaIxnnUd3utWDswgPuQ==
-  dependencies:
-    lodash "^4.17.20"
-    verdaccio-google-cloud "^9.7.2"
-  optionalDependencies:
-    "@outcome-co/verdaccio-github-auth" "^1.1.2"
+    zod "^2.0.0-beta.30"
 
 "@protobufjs/aspromise@^1.1.1", "@protobufjs/aspromise@^1.1.2":
   version "1.1.2"
@@ -2861,10 +2851,10 @@ commander@^4.0.1:
   resolved "https://registry.yarnpkg.com/commander/-/commander-4.1.1.tgz#9fd602bd936294e9e9ef46a3f4d6964044b18068"
   integrity sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==
 
-comment-parser@^0.7.6:
-  version "0.7.6"
-  resolved "https://registry.yarnpkg.com/comment-parser/-/comment-parser-0.7.6.tgz#0e743a53c8e646c899a1323db31f6cd337b10f12"
-  integrity sha512-GKNxVA7/iuTnAqGADlTWX4tkhzxZKXp5fLJqKTlQLHkE65XDUKutZ3BHaJC5IGcper2tT3QRD1xr4o3jNpgXXg==
+comment-parser@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/comment-parser/-/comment-parser-1.1.1.tgz#c0581d520677e2cfab1a568e94ea0400df9fe4bd"
+  integrity sha512-vue7cRi1ZO5/72FJ+wZ5+siTSBlUv3ZksTk8bWD2IkaA6obitzMZP3yI65azTJLckwmi8lxfPP5Sd9oGuZ8e2g==
 
 commondir@^1.0.1:
   version "1.0.1"
@@ -3669,12 +3659,12 @@ eslint-plugin-jest@^24.1.0:
   dependencies:
     "@typescript-eslint/experimental-utils" "^4.0.1"
 
-eslint-plugin-jsdoc@^30.7.7:
-  version "30.7.13"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-30.7.13.tgz#52e5c74fb806d3bbeb51d04a0c829508c3c6b563"
-  integrity sha512-YM4WIsmurrp0rHX6XiXQppqKB8Ne5ATiZLJe2+/fkp9l9ExXFr43BbAbjZaVrpCT+tuPYOZ8k1MICARHnURUNQ==
+eslint-plugin-jsdoc@^31.0.3:
+  version "31.0.8"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-31.0.8.tgz#403d925f401e4b6dd689666f6225376b6af74103"
+  integrity sha512-tB/+QfKXbV1CUqIwpRdZACt7dv1xDjqEjoJpc07EGqLgydJokT43fsZWPfj2mPbiMXYhZQiJXaKhk1x8lgUDQg==
   dependencies:
-    comment-parser "^0.7.6"
+    comment-parser "1.1.1"
     debug "^4.3.1"
     jsdoctypeparser "^9.0.0"
     lodash "^4.17.20"
@@ -4629,6 +4619,16 @@ graceful-fs@^4.0.0, graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2
   version "4.2.4"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"
   integrity sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
+
+graphql-tag@^2.11.0:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.11.0.tgz#1deb53a01c46a7eb401d6cb59dec86fa1cccbffd"
+  integrity sha512-VmsD5pJqWJnQZMUeRwrDhfgoyqcfwEkvtpANqcoUG8/tOLkwNgU9mzub/Mc78OJMhHjx7gfAMTxzdG43VGg3bA==
+
+graphql@^15.4.0:
+  version "15.4.0"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.4.0.tgz#e459dea1150da5a106486ba7276518b5295a4347"
+  integrity sha512-EB3zgGchcabbsU9cFe1j+yxdzKQKAbGUWRb13DsrsMN1yyfmmIq+2+L5MqVWcDCE4V89R5AyUOi7sMOGxdsYtA==
 
 growly@^1.3.0:
   version "1.3.0"
@@ -6008,11 +6008,6 @@ json-stringify-safe@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
   integrity sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=
-
-json-to-graphql-query@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/json-to-graphql-query/-/json-to-graphql-query-2.0.0.tgz#2b0364a1be891ee530947db3cfbcae0ce583976e"
-  integrity sha512-+oFKHOVymP+jDETuLCl+ich+F7b8ym0vdczmOs8aJbtRd61+YGugVrtrI4xh5zfY1ZAVFG+zTAAsfDS1t5+17g==
 
 json5@2.x, json5@^2.1.2:
   version "2.1.3"
@@ -9578,3 +9573,8 @@ yargs@^7.1.0:
     which-module "^1.0.0"
     y18n "^3.2.1"
     yargs-parser "5.0.0-security.0"
+
+zod@^2.0.0-beta.30:
+  version "2.0.0-beta.30"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-2.0.0-beta.30.tgz#67ec3305c4a106a7bf9ef72078de72892d485dbe"
+  integrity sha512-nwCSRXRy1jt0872mMXT2E6VVHXr2hO7jGEtwc/TDqOBb7gGodwAjsQ6UCS4XJLUmjVvmqLsuPvAIN8oL26weCQ==

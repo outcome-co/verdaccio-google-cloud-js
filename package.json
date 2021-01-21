@@ -47,7 +47,7 @@
     "@babel/preset-env": "^7.12.1",
     "@babel/register": "^7.12.1",
     "@google-cloud/datastore": "^6.3.1",
-    "@outcome-co/devkit": "^9.3.5",
+    "@outcome-co/devkit": "^9.4.1",
     "@types/gulp": "^4.0.7",
     "@types/gulp-sourcemaps": "^0.0.34",
     "@types/http-errors": "^1.8.0",
@@ -68,7 +68,7 @@
     "eslint-config-standard-with-typescript": "^19.0.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.1.0",
-    "eslint-plugin-jsdoc": "^30.7.7",
+    "eslint-plugin-jsdoc": "^31.0.3",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^5.0.0",
@@ -83,11 +83,11 @@
     "verdaccio": "^4.8.1",
     "watch": "^1.0.2"
   },
+  "optionalDependencies": {
+    "@outcome-co/verdaccio-github-auth": "^2.0.3"
+  },
   "engines": {
     "node": ">=10"
-  },
-  "optionalDependencies": {
-    "@outcome-co/verdaccio-github-auth": "^1.1.2"
   },
   "publishConfig": {
     "access": "public"
